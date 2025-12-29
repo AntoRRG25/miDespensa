@@ -1,0 +1,34 @@
+{
+  "compilerOptions": {
+    "incremental": true,
+    "target": "ESNext",
+    "module": "NodeNext",
+    "removeComments": true,
+    "moduleResolution": "NodeNext",
+    "resolveJsonModule": true,
+    "noEmit": false,
+    "outDir": "dist/",
+    /* "rootDirs": ["src"],*/
+    "isolatedModules": true,
+    "typeRoots": ["src/@types", "node_modules/@types"],
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "strictPropertyInitialization": true,
+  
+  },
+  "include": [
+    "index.ts",
+    "src/**/*.ts",
+    "src/**/*.d.ts"
+  ],
+  "exclude": [
+    "node_modules",
+    "dist",
+    "src/**/*.test.ts",
+    "tests",
+    "**/*.spec.ts",
+    "**/*.help.ts"
+  ]
+}

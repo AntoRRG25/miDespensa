@@ -1,0 +1,72 @@
+@import './variables.css';
+
+/* Buttons */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--space-sm) var(--space-md);
+    border-radius: var(--radius-md);
+    font-weight: 500;
+    transition: all 0.2s;
+}
+
+.btn-primary {
+    background-color: var(--primary);
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-light);
+}
+
+.btn-secondary {
+    background-color: var(--surface);
+    border: 1px solid var(--border);
+    color: var(--text);
+}
+
+.btn-danger {
+    background-color: var(--danger);
+    color: white;
+}
+
+/* Badges */
+.badge {
+    display: inline-flex;
+    align-items: center;
+    padding: 2px 8px;
+    border-radius: var(--radius-full);
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+
+.badge-warning {
+    background-color: #fef9e7;
+    color: #f39c12;
+}
+
+.badge-danger {
+    background-color: #fceae9;
+    color: var(--danger);
+}
+
+.badge-success {
+    background-color: #eafaf1;
+    color: var(--success);
+}
+
+/* Cards */
+.card {
+    background-color: var(--surface);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-sm);
+    padding: var(--space-md);
+    border: 1px solid var(--border);
+}
+
+/* Navbar Customization */
+.navbar-toggler:focus {
+    box-shadow: 0 0 0 0.25rem rgba(var(--primary), 0.25); 
+    border-color: var(--primary-light); 
+}
