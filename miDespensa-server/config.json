@@ -1,10 +1,10 @@
 {
     "development":{
         "PORT": "4000",
-        "DATABASE_URL": "postgresql://postgres:antonio@localhost:5432/midespensa"
+        "DATABASE_URL": "postgresql://postgres:password@localhost:5432/midespensa"
     },
     "test":{
         "PORT": "8080",
-        "DATABASE_URL": "postgresql://postgres:antonio@localhost:5432/midespensatest"
+        "DATABASE_URL": "postgresql://postgres:password@localhost:5432/midespensatest"
     }
 }
