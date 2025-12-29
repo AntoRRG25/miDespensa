@@ -26,10 +26,13 @@ const update: Schema = {
   quantity: {
     type: 'int'
   
-  },
+  }
+}
+
+const checked: Schema = {
   checked:{
     type: 'boolean'
   }
 }
 
-export { create, update }
+export { create, update, checked }

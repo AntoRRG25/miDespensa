@@ -11,14 +11,34 @@ const create: Schema = {
   quantity: {
     type: 'int'
   },
-  expiresAt: {
-    type: 'string' // Assuming date comes as string from JSON
-   
-  },
   categoryId: {
     type: 'int'
  
   }
 }
 
-export default create
+const update: Schema = {
+  name: {
+    type: 'string',
+   
+    sanitize: {
+      trim: true
+    }
+  },
+  quantity: {
+    type: 'int'
+  },
+  expiresAt: {
+    type: 'string' // Assuming date comes as string from JSON
+   },
+  categoryId: {
+    type: 'int'
+ 
+  }
+}
+
+
+export {
+  create,
+  update
+}

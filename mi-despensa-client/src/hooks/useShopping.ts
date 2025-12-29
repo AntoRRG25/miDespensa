@@ -32,7 +32,7 @@ export const useShopping = () => {
 
     const updateItem = async (id: number, updates: UpdateShoppingItemDto) => {
         try {
-            const updated = await api.updateShoppingItem(id, updates);
+            const updated = await api.updateShoppingItems(id, updates);
             setShoppingItems(shoppingItems.map(i => i.id === id ? updated : i));
             return updated;
         } catch (err) {
@@ -42,7 +42,14 @@ export const useShopping = () => {
     };
 
     const toggleComplete = async (id: number, currentStatus: boolean) => {
-        return updateItem(id, { checked: !currentStatus });
+         try {
+            const updated = await api.updateShoppingItem(id, { checked: !currentStatus });
+            setShoppingItems(shoppingItems.map(i => i.id === id ? updated : i));
+            return updated;
+        } catch (err) {
+            setError('Error al actualizar ítem');
+            throw err;
+        }
     };
 
     const removeItem = async (id: number) => {

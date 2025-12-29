@@ -89,7 +89,7 @@ export const PantryForm: React.FC<PantryFormProps> = ({ initialData, onClose }) 
                 required
             >
                 <option value="">Seleccionar...</option>
-                {categories.map(c => <option key={c.id} value={c.id}>{c.icon ||c.name}</option>)}
+                {categories.map(c => <option style={{backgroundColor:`${c.color}`}} key={c.id} value={c.id}>{c.icon+' '+c.name}</option>)}
             </select>
 
             <label style={{ display: 'block', marginBottom: '0.25rem' }}>Vencimiento (Opcional)</label>

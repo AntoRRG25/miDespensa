@@ -36,7 +36,8 @@ Manage the shopping list.
 | `GET` | `/stats` | Get statistics | - |
 | `GET` | `/:id` | Get item by ID | `id` (number) |
 | `POST` | `/` | Add item to list | Body: `name` (string), `quantity` (number), `checked` (boolean) |
-| `PUT` | `/:id` | Update item | `id` (int), Body: Item fields |
+| `PUT` | `/:id` | Update item | `id` (int), Body: `name` (string), `quantity` (number) |
+| `PATCH` | `/:id` | Update item | `id` (int), Body: `checked` (boolean) |
 | `DELETE` | `/:id` | Delete item | `id` (int) |
 
 ### Logs (`/api/logs`)

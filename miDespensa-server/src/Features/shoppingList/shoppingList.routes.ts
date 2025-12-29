@@ -3,7 +3,7 @@ import { ShoppingListRepository } from './ShoppingListRepository.js'
 import { ShoppingListService } from './ShoppingListService.js'
 import { ShoppingListController } from './ShoppingListController.js'
 import { Validator } from 'req-valid-express'
-import {create, update }from './schemas/create.js'
+import {create, update, checked }from './schemas/create.js'
 
 const repository = new ShoppingListRepository()
 const service = new ShoppingListService(repository)
@@ -42,6 +42,12 @@ shoppingListRouter.put(
   '/:id',
   Validator.paramId('id', Validator.ValidReg.INT),
   Validator.validateBody(update),
+  controller.update
+)
+shoppingListRouter.patch(
+  '/:id',
+  Validator.paramId('id', Validator.ValidReg.INT),
+  Validator.validateBody(checked),
   controller.update
 )
 

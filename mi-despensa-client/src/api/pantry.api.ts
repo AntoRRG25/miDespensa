@@ -18,7 +18,7 @@ export const createPantryProduct = async (data: CreatePantryProductDto): Promise
 };
 
 export const updatePantryProduct = async (id: number, data: UpdatePantryProductDto): Promise<PantryProduct> => {
-    const response = await api.patch<ApiResponse<PantryProduct>>(`/pantry/${id}`, data);
+    const response = await api.put<ApiResponse<PantryProduct>>(`/pantry/${id}`, data);
     return response.data.results;
 };
 

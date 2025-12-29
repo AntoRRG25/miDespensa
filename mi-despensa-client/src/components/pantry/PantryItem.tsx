@@ -23,8 +23,6 @@ export const PantryItem: React.FC<PantryItemProps> = ({ product, onEdit }) => {
     };
     const category = categories.find(c => c.id === product.categoryId);
     const customCategoryColor = category ? category.color : 'var(--text-light)';
-    console.log('Product categoryId:', product.categoryId);
-    console.log('Category for product', product.name, ':', category?.color);
     return (
         <div className="card" style={{ marginBottom: '1rem', display: 'flex', flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center' , backgroundColor:`${customCategoryColor}`}}>
             <div>

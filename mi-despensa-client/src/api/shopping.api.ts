@@ -17,6 +17,11 @@ export const createShoppingItem = async (data: CreateShoppingItemDto): Promise<S
     return response.data.results;
 };
 
+export const updateShoppingItems = async (id: number, data: UpdateShoppingItemDto): Promise<ShoppingItem> => {
+    const response = await api.put<ApiResponse<ShoppingItem>>(`/shopping-list/${id}`, data);
+    return response.data.results;
+};
+
 export const updateShoppingItem = async (id: number, data: UpdateShoppingItemDto): Promise<ShoppingItem> => {
     const response = await api.patch<ApiResponse<ShoppingItem>>(`/shopping-list/${id}`, data);
     return response.data.results;

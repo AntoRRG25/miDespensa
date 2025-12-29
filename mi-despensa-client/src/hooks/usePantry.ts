@@ -21,7 +21,6 @@ export const usePantry = () => {
 
     const addProduct = async (product: CreatePantryProductDto) => {
         try {
-            console.log('Creating product', product);
             const newProduct = await api.createPantryProduct(product);
             setProducts([...products, newProduct]);
             return newProduct;
