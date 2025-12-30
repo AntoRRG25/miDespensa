@@ -2,7 +2,7 @@ import express from 'express'
 import categoryRouter from './Features/categories/category.routes.js'
 import pantryProductRouter from './Features/pantryProducts/product.routes.js'
 import shoppingListRouter from './Features/shoppingList/shoppingList.routes.js'
-import loggerRouter from './Features/logs/log.routes.js'
+import loggerRouter from './Features/dbLogs/log.routes.js'
 
 const mainRouter = express.Router()
     
