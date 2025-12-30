@@ -34,7 +34,7 @@
 - ✅ Marcar items como "comprados" (campo `checked`)
 - ✅ Contador de items pendientes
 - ✅ Estadísticas de la lista (`GET /api/shopping-list/stats`)
-- ✅ Endpoints: `GET`, `POST`, `PUT`, `PATCH`, `DELETE`
+- ✅ Endpoints: `GET /api/shopping-list`, `POST`, `PUT`, `PATCH`, `DELETE`
 
 #### 🔧 Sistema de Logs
 - ✅ Registro automático de errores en base de datos
