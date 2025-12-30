@@ -31,7 +31,7 @@ categoryRouter.get(
 
 categoryRouter.get(
   '/:id', 
- Validator.paramId('id', Validator.ValidReg.INT),
+  Validator.paramId('id', Validator.ValidReg.INT),
   categoryController.getById
 )
 
@@ -43,7 +43,7 @@ categoryRouter.post(
 
 categoryRouter.put(
   '/:id', 
- Validator.paramId('id', Validator.ValidReg.INT),
+  Validator.paramId('id', Validator.ValidReg.INT),
   categoryController.update
 )
 

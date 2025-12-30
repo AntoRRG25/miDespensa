@@ -34,24 +34,24 @@ export class Middlewares{
       next()
     }
   }
-    // static paramNumId(fieldName: string) {
-    //     return (req:Request, res: Response, next: NextFunction) => {
-    //           const id = req.params[fieldName];
-    //           if (!id) {
-    //               next(middError(`Missing ${fieldName}`, 400));
-    //               return;
-    //           }
-    //           const INT: RegExp = /^\d+$/ // Solo enteros positivos
-    //           const isValid = INT.test(id);
-    //           const parserValue = parseInt(id, 10);
-    //           if (!isValid) {
-    //               next(middError('Invalid parameters', 400));
-    //               return;
-    //           }
-    //               req.context = req.context || {};
-    //               req.context.params = parserValue
-    //           next();
-    //       };
-    //   }
+  // static paramNumId(fieldName: string) {
+  //     return (req:Request, res: Response, next: NextFunction) => {
+  //           const id = req.params[fieldName];
+  //           if (!id) {
+  //               next(middError(`Missing ${fieldName}`, 400));
+  //               return;
+  //           }
+  //           const INT: RegExp = /^\d+$/ // Solo enteros positivos
+  //           const isValid = INT.test(id);
+  //           const parserValue = parseInt(id, 10);
+  //           if (!isValid) {
+  //               next(middError('Invalid parameters', 400));
+  //               return;
+  //           }
+  //               req.context = req.context || {};
+  //               req.context.params = parserValue
+  //           next();
+  //       };
+  //   }
 
 }

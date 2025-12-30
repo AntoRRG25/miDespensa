@@ -3,7 +3,7 @@ import { ShoppingListRepository } from './ShoppingListRepository.js'
 import { ShoppingListService } from './ShoppingListService.js'
 import { ShoppingListController } from './ShoppingListController.js'
 import { Validator } from 'req-valid-express'
-import {create, update, checked }from './schemas/create.js'
+import { create, update, checked }from './schemas/create.js'
 
 const repository = new ShoppingListRepository()
 const service = new ShoppingListService(repository)

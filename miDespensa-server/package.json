@@ -5,17 +5,22 @@
   "main": "dist/index.js",
   "scripts": {
     "seed": "tsx seeds/seed.ts",
-    "build": "tsc",
+    "migrate:deploy": "prisma migrate deploy",
+    "build": "prisma generate && tsc",
     "start": "cross-env NODE_ENV=production node dist/index.js",
     "dev": "cross-env NODE_ENV=development tsx --watch index.ts",
     "test": "cross-env NODE_ENV=test vitest --run",
     "lint": "eslint . --fix"
   },
   "keywords": [],
-  "author": "",
+  "author": "antorrg25",
   "license": "MIT",
   "type": "module",
-  "dependencies": {
+    "engines": {
+    "node": "20.19.6"
+              },
+    "packageManager": "pnpm@10.26.2",
+    "dependencies": {
     "@prisma/client": "5.22.0",
     "cors": "^2.8.5",
     "cross-env": "^10.1.0",

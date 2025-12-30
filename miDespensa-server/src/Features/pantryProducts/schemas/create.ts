@@ -30,7 +30,7 @@ const update: Schema = {
   },
   expiresAt: {
     type: 'string' // Assuming date comes as string from JSON
-   },
+  },
   categoryId: {
     type: 'int'
  

@@ -11,7 +11,7 @@ const create: Schema = {
   quantity: {
     type: 'int'
   
-  },
+  }
 }
 
 

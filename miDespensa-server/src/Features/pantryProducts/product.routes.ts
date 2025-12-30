@@ -3,7 +3,7 @@ import { PantryProductRepository } from './PantryProductRepository.js'
 import { PantryProductService } from './PantryProductService.js'
 import { PantryProductController } from './PantryProductController.js'
 import { Validator } from 'req-valid-express'
-import {create, update } from './schemas/create.js'
+import { create, update } from './schemas/create.js'
 
 const repository = new PantryProductRepository()
 const service = new PantryProductService(repository)
@@ -23,7 +23,7 @@ pantryProductRouter.get(
 
 pantryProductRouter.get(
   '/:id',
- Validator.paramId('id', Validator.ValidReg.INT),
+  Validator.paramId('id', Validator.ValidReg.INT),
   controller.getById
 )
 
@@ -35,8 +35,8 @@ pantryProductRouter.post(
 
 pantryProductRouter.put(
   '/:id',
- Validator.paramId('id', Validator.ValidReg.INT),
- Validator.validateBody(update),
+  Validator.paramId('id', Validator.ValidReg.INT),
+  Validator.validateBody(update),
   controller.update
 )
 

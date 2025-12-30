@@ -1,12 +1,12 @@
 import { type Request, type Response } from 'express'
-import { BaseController } from "./BaseController.js";
+import { BaseController } from './BaseController.js'
 import { type BaseService } from '../Services/BaseService.js'
 
 export class CustomController<TDTO, TCreate, TUpdate> extends BaseController<TDTO, TCreate, TUpdate> {
- protected service: BaseService<TDTO, TCreate, TUpdate>
+  protected service: BaseService<TDTO, TCreate, TUpdate>
   constructor(service: BaseService<TDTO, TCreate, TUpdate>) {
-    super(service);
-    this.service = service;
+    super(service)
+    this.service = service
   }
   getById = async(req: Request, res: Response) => {
     const { id } = req.params

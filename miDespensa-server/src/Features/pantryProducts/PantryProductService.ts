@@ -22,19 +22,19 @@ export class PantryProductService extends BaseService<IPantryProductDTO, PantryP
     return this.repository.create(prismaData)
   }
   async update(id: number, data: PantryProductUpdate) {
-  const prismaData: any = {
-    name: data.name,
-    quantity: data.quantity,
-    expiresAt: new Date(data.expiresAt as string)
-  }
-
-  if (data.categoryId) {
-    prismaData.category = {
-      connect: { id: data.categoryId }
+    const prismaData: any = {
+      name: data.name,
+      quantity: data.quantity,
+      expiresAt: new Date(data.expiresAt as string)
     }
-  }
 
-  return this.repository.update(id, prismaData)
-}
+    if (data.categoryId) {
+      prismaData.category = {
+        connect: { id: data.categoryId }
+      }
+    }
+
+    return this.repository.update(id, prismaData)
+  }
 
 }
