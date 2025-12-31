@@ -14,7 +14,11 @@ const create: Schema = {
   categoryId: {
     type: 'int'
  
-  }
+  },
+  expiresAt: {
+    type: 'string', // Assuming date comes as string from JSON
+    default: () => new Date().toISOString()
+  },
 }
 
 const update: Schema = {
